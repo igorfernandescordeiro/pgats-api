@@ -1,6 +1,10 @@
+require('dotenv').config();
 const request = require('supertest');
 const { faker } = require('@faker-js/faker');
-const rotaUsers = 'http://localhost:3000';
+
+
+const rotaUsers = process.env.URL_USERS;
+
 
 describe('Suite de testes crud (post, get, put, delete)', () => {
 
@@ -88,10 +92,10 @@ describe('Suite de testes crud (post, get, put, delete)', () => {
             //validar se realmente foi removido o registro
         const responseGet = await request(rotaUsers)
         .get(`/users/${idUserToBeDeleted}`)
-
-        expect(responseGet.status).toBe(500);
-        expect(responseGet.body).toEqual({ error: 'Erro ao obter dados do usuário' });
         console.log(responseGet.body);
+        expect(responseGet.status).toBe(404);
+        expect(responseGet.body).toEqual({ error: 'Usuário não encontrado' });
+        
             
     });
 
