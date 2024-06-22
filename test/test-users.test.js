@@ -14,18 +14,23 @@ describe('Suite de testes crud (post, get, put, delete)', () => {
         nome: faker.person.fullName(),
         telefone: faker.phone.number(),
         senha: faker.internet.password()
-    }
+    };
+
+    let idUserToBeDeleted;
 
     it('Cadastrando um usuário, e consultando o retorno dos campos se foram os enviados', async () => {
         const response = await request(rotaUsers)
             .post('/users')
             .send(payload_usuario);
+            
+            idUserToBeDeleted = response.body.id;
 
             console.log('Responde BODY: ', response.body);
             expect(response.status).toBe(201);
 
             const{id, nome, telefone, email} = response.body;
-
+            
+            
             expect(id).toBeDefined();
 
             expect(nome).toBe(payload_usuario.nome);
@@ -33,7 +38,6 @@ describe('Suite de testes crud (post, get, put, delete)', () => {
             expect(email).toBe(payload_usuario.email);
 
             expect(response.body.senha).toBeUndefined();
-            
     });
 
     it('Cadastrando um usuário faltando email, validar status code e mensagem de erro.', async () => {
@@ -46,7 +50,52 @@ describe('Suite de testes crud (post, get, put, delete)', () => {
 
             expect(response.body.error).toBe('Os seguintes campos são obrigatórios: email');
             
-    })
+    });
+
+    it('Alterar', async () => {
+
+        const payload_novo_usuario = {
+            nome: faker.person.fullName({ firstName: 'Igor' }),
+            telefone:faker.phone.number(),
+            email: faker.internet.email(),
+            senha: faker.internet.password()
+        };
+
+        const responsePut = await request(rotaUsers)
+            .put(`/users/${idUserToBeDeleted}`)
+            .send(payload_novo_usuario);
+
+
+            expect(responsePut.status).toBe(201);
+
+            expect(responsePut.body.nome).toBe(payload_novo_usuario.nome);
+            expect(responsePut.body.telefone).toBe(payload_novo_usuario.telefone);
+
+            console.log('Usuário alterado: ', responsePut.body);
+
+
+
+
+    });
+
+    it('Deverá remover o registro cadastrado anteriormente e retornar 204', async () => {
+        const response = await request(rotaUsers)
+            .delete(`/users/${idUserToBeDeleted}`);
+
+            console.log('Responde BODY: ', response.body);
+            expect(response.status).toBe(204);
+
+            //validar se realmente foi removido o registro
+        const responseGet = await request(rotaUsers)
+        .get(`/users/${idUserToBeDeleted}`)
+
+        expect(responseGet.status).toBe(500);
+        expect(responseGet.body).toEqual({ error: 'Erro ao obter dados do usuário' });
+        console.log(responseGet.body);
+            
+    });
+
+
 
     // const payload_cadastro_usuário = {
     //     nome: "Igor",
