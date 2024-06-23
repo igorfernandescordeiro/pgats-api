@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numPassedTests": 2,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 1,
+  "numTotalTests": 2,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1719155136036,
+  "startTime": 1719158121497,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 1,
+      "numPassingTests": 2,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719155138556,
-        "runtime": 2466,
+        "end": 1719158124060,
+        "runtime": 2509,
         "slow": false,
-        "start": 1719155136090
+        "start": 1719158121551
       },
       "skipped": false,
       "snapshot": {
@@ -58,7 +58,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 44,
+          "duration": 48,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Criar novo conteúdo",
@@ -68,6 +68,21 @@
           "retryReasons": [],
           "status": "passed",
           "title": "Criar novo conteúdo"
+        },
+        {
+          "ancestorTitles": [
+            "Testes integrados da toda de conteúdos"
+          ],
+          "duration": 4,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Testes integrados da toda de conteúdos Consultar item cadastrado e verificar se os dados estão corretos",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Consultar item cadastrado e verificar se os dados estão corretos"
         }
       ],
       "failureMessage": null
