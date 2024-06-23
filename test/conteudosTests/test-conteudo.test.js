@@ -57,4 +57,8 @@ describe('Testes integrados da toda de conteúdos', () => {
         expect(tipoConteudo).toBe(payload_cadastro_conteudo.tipoConteudo);
         expect(conteudo).toBe(payload_cadastro_conteudo.conteudo);
     });
+
+    it('Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados ', async() => {
+        
+    });
 });
