@@ -4,22 +4,22 @@ const { faker } = require('@faker-js/faker');
 const{
     URLS,
     HEADERS
-} = require('../../suporte/configEnv')
+} = require('../suporte/configEnv.js');
 
 describe('Suite de testes crud (post, get, put, delete)', () => {
 
     let recebeId;
 
     const payloadUsuario = {
-        nome: faker.name.fullName(),
-        telefone: faker.phone.number('+55 (##) ####-####'),
+        nome: faker.person.fullName(),
+        telefone: faker.phone.number(),
         email: faker.internet.email(),
         senha: faker.internet.password()
     }
 
     const payloadUsuarioEmailFieldNull = {
-        nome: faker.name.fullName(),
-        telefone: faker.phone.number('+55 (##) ####-####'),
+        nome: faker.person.fullName(),
+        telefone: faker.phone.number(),
         email: null,
         senha: faker.internet.password()
     }
@@ -57,8 +57,8 @@ describe('Suite de testes crud (post, get, put, delete)', () => {
 
     it('Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.', async () => {
         const novoUsuario = {
-            nome: faker.name.fullName(),
-            telefone: faker.phone.number('+55 (##) ####-####'),
+            nome: faker.person.fullName(),
+            telefone: faker.phone.number(),
             email: faker.internet.email(),
             senha: faker.internet.password()
         }

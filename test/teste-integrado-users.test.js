@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker');
 const{
     URLS,
     HEADERS
-} = require('../../suporte/configEnv')
+} = require('../suporte/configEnv.js')
 
 describe('Suite de testes crud (post, get, put, delete USER)', () => {
 

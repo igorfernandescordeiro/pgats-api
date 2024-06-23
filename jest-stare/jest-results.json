@@ -2,9 +2,9 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 3,
-  "numPassedTests": 9,
+  "numPassedTests": 10,
   "numPendingTestSuites": 0,
-  "numPendingTests": 1,
+  "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 3,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1719080424510,
+  "startTime": 1719148924599,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 1,
-      "numPendingTests": 1,
+      "numPassingTests": 2,
+      "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719080428501,
-        "runtime": 3518,
+        "end": 1719148927508,
+        "runtime": 2617,
         "slow": false,
-        "start": 1719080424983
+        "start": 1719148924891
       },
       "skipped": false,
       "snapshot": {
@@ -52,16 +52,16 @@
         "unmatched": 0,
         "updated": 0
       },
-      "testFilePath": "/Users/taynaraluana/Downloads/primeiro-test/test/teste-integrado-users.test.js",
+      "testFilePath": "Z:\\Documents\\PGATS\\PGATS-API\\Aula_2\\PRIMEIRO-TEST\\test\\teste-integrado-users.test.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
+            "Suite de testes crud (post, get, put, delete USER)"
           ],
-          "duration": 8,
+          "duration": 13,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.",
+          "fullName": "Suite de testes crud (post, get, put, delete USER) Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 9,
@@ -71,100 +71,12 @@
         },
         {
           "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
-          ],
-          "duration": null,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Deverá remover o registro cadastrado anteriormente. E retornar 204.",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 0,
-          "retryReasons": [],
-          "status": "pending",
-          "title": "Deverá remover o registro cadastrado anteriormente. E retornar 204."
-        }
-      ],
-      "failureMessage": null
-    },
-    {
-      "leaks": false,
-      "numFailingTests": 0,
-      "numPassingTests": 4,
-      "numPendingTests": 0,
-      "numTodoTests": 0,
-      "openHandles": [],
-      "perfStats": {
-        "end": 1719080428512,
-        "runtime": 3533,
-        "slow": false,
-        "start": 1719080424979
-      },
-      "skipped": false,
-      "snapshot": {
-        "added": 0,
-        "fileDeleted": false,
-        "matched": 0,
-        "unchecked": 0,
-        "uncheckedKeys": [],
-        "unmatched": 0,
-        "updated": 0
-      },
-      "testFilePath": "/Users/taynaraluana/Downloads/primeiro-test/test/test-users.test.js",
-      "testResults": [
-        {
-          "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
-          ],
-          "duration": 30,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Ausencia de campo email, deverá gerar o status code 422 e emitir uma mensagem de erro validando a mesma.",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "Ausencia de campo email, deverá gerar o status code 422 e emitir uma mensagem de erro validando a mesma."
-        },
-        {
-          "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
-          ],
-          "duration": 5,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Cadastrando um usuário, e consultando o retorno dos campos, se foram os enviados.",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "Cadastrando um usuário, e consultando o retorno dos campos, se foram os enviados."
-        },
-        {
-          "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
-          ],
-          "duration": 7,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 7,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados."
-        },
-        {
-          "ancestorTitles": [
-            "Suite de testes crud (post, get, put, delete)"
+            "Suite de testes crud (post, get, put, delete USER)"
           ],
           "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "Suite de testes crud (post, get, put, delete) Deverá remover o registro cadastrado anteriormente. E retornar 204.",
+          "fullName": "Suite de testes crud (post, get, put, delete USER) Deverá remover o registro cadastrado anteriormente. E retornar 204.",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 3,
@@ -183,10 +95,10 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719080428518,
-        "runtime": 3539,
+        "end": 1719148927516,
+        "runtime": 2626,
         "slow": false,
-        "start": 1719080424979
+        "start": 1719148924890
       },
       "skipped": false,
       "snapshot": {
@@ -198,13 +110,101 @@
         "unmatched": 0,
         "updated": 0
       },
-      "testFilePath": "/Users/taynaraluana/Downloads/primeiro-test/test/teste-env-separado.test.js",
+      "testFilePath": "Z:\\Documents\\PGATS\\PGATS-API\\Aula_2\\PRIMEIRO-TEST\\test\\test-users.test.js",
       "testResults": [
         {
           "ancestorTitles": [
             "Suite de testes crud (post, get, put, delete)"
           ],
-          "duration": 26,
+          "duration": 33,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete) Cadastrando um usuário, e consultando o retorno dos campos se foram os enviados",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Cadastrando um usuário, e consultando o retorno dos campos se foram os enviados"
+        },
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete)"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete) Cadastrando um usuário faltando email, validar status code e mensagem de erro.",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Cadastrando um usuário faltando email, validar status code e mensagem de erro."
+        },
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete)"
+          ],
+          "duration": 7,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete) Alterar",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Alterar"
+        },
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete)"
+          ],
+          "duration": 8,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Suite de testes crud (post, get, put, delete) Deverá remover o registro cadastrado anteriormente e retornar 204",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Deverá remover o registro cadastrado anteriormente e retornar 204"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 4,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1719148927525,
+        "runtime": 2634,
+        "slow": false,
+        "start": 1719148924891
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "Z:\\Documents\\PGATS\\PGATS-API\\Aula_2\\PRIMEIRO-TEST\\test\\teste-env-separado.test.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "Suite de testes crud (post, get, put, delete)"
+          ],
+          "duration": 31,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Suite de testes crud (post, get, put, delete) Ausencia de campo email, deverá gerar o status code 422 e emitir uma mensagem de erro validando a mesma.",
@@ -219,7 +219,7 @@
           "ancestorTitles": [
             "Suite de testes crud (post, get, put, delete)"
           ],
-          "duration": 4,
+          "duration": 9,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Suite de testes crud (post, get, put, delete) Cadastrando um usuário, e consultando o retorno dos campos, se foram os enviados.",
@@ -234,7 +234,7 @@
           "ancestorTitles": [
             "Suite de testes crud (post, get, put, delete)"
           ],
-          "duration": 8,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Suite de testes crud (post, get, put, delete) Alterando o registro cadastrado anteriormente, e verificando se os dados realmente foram alterados.",
@@ -249,7 +249,7 @@
           "ancestorTitles": [
             "Suite de testes crud (post, get, put, delete)"
           ],
-          "duration": 16,
+          "duration": 6,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Suite de testes crud (post, get, put, delete) Deverá remover o registro cadastrado anteriormente. E retornar 204.",
