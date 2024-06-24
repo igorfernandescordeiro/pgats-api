@@ -50,13 +50,13 @@ describe('Testes integrados da toda de conteúdos', () => {
         const response = await request(rotaUsers)
             .get(`/conteudos/${idConteudoCadastrado}`);
         console.log(response.body);
-    
+
         //desestruturação do response para poder validar os dados recebidos com enviados
         const { id, titulo, descricao, tipoConteudo, conteudo, carro } = response.body;
 
         // valida se o status code está correto dessa consulta
         expect(response.status).toBe(200);
-        
+
         // verifica se os dados buscados são os mesmo que os enviados no cadastro
         expect(id).toBe(idConteudoCadastrado);
         expect(titulo).toBe(payload_cadastro_conteudo.titulo);
@@ -65,7 +65,7 @@ describe('Testes integrados da toda de conteúdos', () => {
         expect(conteudo).toBe(payload_cadastro_conteudo.conteudo);
     });
 
-    it('Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados ', async() => {
+    it('Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados ', async () => {
         const responsePut = await request(rotaUsers)
             .put(`/conteudos/${idConteudoCadastrado}`)
             .send(payload_alterar_conteudo);
@@ -79,7 +79,7 @@ describe('Testes integrados da toda de conteúdos', () => {
 
         const responseGet = await request(rotaUsers)
             .get(`/conteudos/${idConteudoCadastrado}`);
-            console.log(responseGet.body);
+        console.log(responseGet.body);
         expect(responseGet.status).toBe(200);
         expect(responseGet.body.id).toBe(idConteudoCadastrado);
         expect(responseGet.body.titulo).toBe(payload_alterar_conteudo.titulo);
@@ -87,4 +87,15 @@ describe('Testes integrados da toda de conteúdos', () => {
         expect(responseGet.body.tipoConteudo).toBe(payload_alterar_conteudo.tipoConteudo);
         expect(responseGet.body.conteudo).toBe(payload_alterar_conteudo.conteudo);
     });
+
+    it('Remover o conteúdo e garantir que foi removido e não existe mais para consulta', async () => {
+        // Por fim, você deverá remover o conteúdo e garantir que o mesmo foi removido e não existe mais para consulta.
+
+
+
+    });
+
+
+
+
 });
