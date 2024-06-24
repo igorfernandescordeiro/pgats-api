@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 3,
+  "numPassedTests": 4,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 3,
+  "numTotalTests": 4,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1719251739238,
+  "startTime": 1719253570190,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 3,
+      "numPassingTests": 4,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719251741740,
-        "runtime": 2450,
+        "end": 1719253572752,
+        "runtime": 2509,
         "slow": false,
-        "start": 1719251739290
+        "start": 1719253570243
       },
       "skipped": false,
       "snapshot": {
@@ -58,7 +58,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 49,
+          "duration": 58,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Criar novo conteúdo",
@@ -73,7 +73,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 6,
+          "duration": 4,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Consultar item cadastrado e verificar se os dados estão corretos",
@@ -88,7 +88,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 11,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados ",
@@ -98,6 +98,21 @@
           "retryReasons": [],
           "status": "passed",
           "title": "Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados "
+        },
+        {
+          "ancestorTitles": [
+            "Testes integrados da toda de conteúdos"
+          ],
+          "duration": 8,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "Testes integrados da toda de conteúdos Remover o conteúdo e garantir que foi removido e não existe mais para consulta",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 5,
+          "retryReasons": [],
+          "status": "passed",
+          "title": "Remover o conteúdo e garantir que foi removido e não existe mais para consulta"
         }
       ],
       "failureMessage": null

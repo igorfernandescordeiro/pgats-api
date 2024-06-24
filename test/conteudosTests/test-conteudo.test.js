@@ -90,12 +90,24 @@ describe('Testes integrados da toda de conteúdos', () => {
 
     it('Remover o conteúdo e garantir que foi removido e não existe mais para consulta', async () => {
         // Por fim, você deverá remover o conteúdo e garantir que o mesmo foi removido e não existe mais para consulta.
+        const responseDelete = await request(rotaUsers)
+            .delete(`/conteudos/${idConteudoCadastrado}`);
+        // garante que a deleção ocorreu com sucesso
+        expect(responseDelete.status).toBe(200); // should be 204 but it is 200
 
+        // garante que o conteúdo não existe mais usando o mesmo delete
+        const responseDeleteSame = await request(rotaUsers)
+            .delete(`/conteudos/${idConteudoCadastrado}`);
 
+        expect(responseDeleteSame.status).toBe(404);
+        expect(responseDeleteSame.body.error).toBe('Erro ao excluir o conteúdo, o conteúdo não foi encontrado.');
 
+        // garante que o conteúdo não existe mais usando o get
+
+        const responseGet = await request(rotaUsers)
+            .get(`/conteudos/${idConteudoCadastrado}`);
+
+        expect(responseGet.status).toBe(404);
+        expect(responseGet.body.error).toBe(`O conteúdo com o ID: ${idConteudoCadastrado} não foi encontrado.`);
     });
-
-
-
-
 });
