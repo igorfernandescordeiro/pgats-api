@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1719253570190,
+  "startTime": 1719254282600,
   "success": false,
   "testResults": [
     {
@@ -37,10 +37,10 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719253572752,
-        "runtime": 2509,
+        "end": 1719254285113,
+        "runtime": 2461,
         "slow": false,
-        "start": 1719253570243
+        "start": 1719254282652
       },
       "skipped": false,
       "snapshot": {
@@ -58,7 +58,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 58,
+          "duration": 49,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Criar novo conteúdo",
@@ -73,7 +73,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 4,
+          "duration": 5,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Consultar item cadastrado e verificar se os dados estão corretos",
@@ -103,7 +103,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 8,
+          "duration": 10,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Remover o conteúdo e garantir que foi removido e não existe mais para consulta",

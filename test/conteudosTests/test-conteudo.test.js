@@ -24,14 +24,13 @@ describe('Testes integrados da toda de conteúdos', () => {
     let idConteudoCadastrado;
 
     it('Criar novo conteúdo', async () => {
-
         const response = await request(rotaUsers)
             .post('/conteudos')
             .send(payload_cadastro_conteudo);
         console.log(response.body);
 
         //desestruturação do response para poder validar os dados recebidos com enviados
-        const { titulo, descricao, tipoConteudo, conteudo, carro } = response.body;
+        const { titulo, descricao, tipoConteudo, conteudo } = response.body;
 
         // salva o id para utilizar em testes de alteração e deleção
         idConteudoCadastrado = response.body.id;
@@ -71,12 +70,9 @@ describe('Testes integrados da toda de conteúdos', () => {
             .send(payload_alterar_conteudo);
         console.log(responsePut.body);
 
-        //Você deverá alterar o conteúdo consultado anteriormente, e em seguida validar se realmente os dados foram alterados.
-
         expect(responsePut.status).toBe(201);
 
         // verifica se os dados alterados foram alterados para o id em especifico
-
         const responseGet = await request(rotaUsers)
             .get(`/conteudos/${idConteudoCadastrado}`);
         console.log(responseGet.body);
@@ -89,7 +85,6 @@ describe('Testes integrados da toda de conteúdos', () => {
     });
 
     it('Remover o conteúdo e garantir que foi removido e não existe mais para consulta', async () => {
-        // Por fim, você deverá remover o conteúdo e garantir que o mesmo foi removido e não existe mais para consulta.
         const responseDelete = await request(rotaUsers)
             .delete(`/conteudos/${idConteudoCadastrado}`);
         // garante que a deleção ocorreu com sucesso
