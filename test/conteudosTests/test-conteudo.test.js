@@ -14,6 +14,13 @@ describe('Testes integrados da toda de conteúdos', () => {
         conteudo: faker.word.words(12)
     };
 
+    const payload_alterar_conteudo = {
+        titulo: 'IGOR',
+        descricao: faker.word.words(8),
+        tipoConteudo: faker.string.symbol(),
+        conteudo: faker.word.words(10)
+    };
+
     let idConteudoCadastrado;
 
     it('Criar novo conteúdo', async () => {
@@ -59,6 +66,25 @@ describe('Testes integrados da toda de conteúdos', () => {
     });
 
     it('Alterar o conteúdo consultado anteriormente e validar se os novos dados foram alterados ', async() => {
-        
+        const responsePut = await request(rotaUsers)
+            .put(`/conteudos/${idConteudoCadastrado}`)
+            .send(payload_alterar_conteudo);
+        console.log(responsePut.body);
+
+        //Você deverá alterar o conteúdo consultado anteriormente, e em seguida validar se realmente os dados foram alterados.
+
+        expect(responsePut.status).toBe(201);
+
+        // verifica se os dados alterados foram alterados para o id em especifico
+
+        const responseGet = await request(rotaUsers)
+            .get(`/conteudos/${idConteudoCadastrado}`);
+            console.log(responseGet.body);
+        expect(responseGet.status).toBe(200);
+        expect(responseGet.body.id).toBe(idConteudoCadastrado);
+        expect(responseGet.body.titulo).toBe(payload_alterar_conteudo.titulo);
+        expect(responseGet.body.descricao).toBe(payload_alterar_conteudo.descricao);
+        expect(responseGet.body.tipoConteudo).toBe(payload_alterar_conteudo.tipoConteudo);
+        expect(responseGet.body.conteudo).toBe(payload_alterar_conteudo.conteudo);
     });
 });
