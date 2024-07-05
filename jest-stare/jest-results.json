@@ -2,13 +2,13 @@
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
   "numPassedTestSuites": 1,
-  "numPassedTests": 4,
+  "numPassedTests": 3,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 1,
-  "numTotalTests": 4,
+  "numTotalTests": 3,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1719254282600,
+  "startTime": 1720211470768,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 4,
+      "numPassingTests": 3,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1719254285113,
-        "runtime": 2461,
+        "end": 1720211473392,
+        "runtime": 2569,
         "slow": false,
-        "start": 1719254282652
+        "start": 1720211470823
       },
       "skipped": false,
       "snapshot": {
@@ -58,28 +58,13 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 49,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "Testes integrados da toda de conteúdos Criar novo conteúdo",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 5,
-          "retryReasons": [],
-          "status": "passed",
-          "title": "Criar novo conteúdo"
-        },
-        {
-          "ancestorTitles": [
-            "Testes integrados da toda de conteúdos"
-          ],
           "duration": 5,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Consultar item cadastrado e verificar se os dados estão corretos",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 6,
+          "numPassingAsserts": 11,
           "retryReasons": [],
           "status": "passed",
           "title": "Consultar item cadastrado e verificar se os dados estão corretos"
@@ -103,7 +88,7 @@
           "ancestorTitles": [
             "Testes integrados da toda de conteúdos"
           ],
-          "duration": 10,
+          "duration": 8,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "Testes integrados da toda de conteúdos Remover o conteúdo e garantir que foi removido e não existe mais para consulta",

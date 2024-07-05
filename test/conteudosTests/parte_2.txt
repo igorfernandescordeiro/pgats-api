@@ -1,0 +1,99 @@
+PARTE 02
+Mesmo sendo um teste voltado a Automação da API, você também terá a missão de validar, os dados da documentação se os mesmos estão devidamente retornando os status corretos, as mensagens previamente descritivas, e também se todos os campos que estamos passando de fato são campos que precisam estar informados na documentação, tanto em seu envio, quanto em seu retorno.
+Essa validação pode ser desenvolvida em um documento no formato de txt também, e enviado em anexo na atividade correspondente
+
+
+
+
+delete 404 - "error": "Erro ao excluir o conteúdo, o conteúdo não foi encontrado."
+delete 200 - "message": "O conteúdo foi removido com sucesso!"
+
+post 201 body - campo adicionais "id", "dataCadastro"
+
+put 201 body - campo adicionais "id", "dataCadastro", description retorna objeto
+put 404 body - "error": "O contedúdo que você está tentando alterar não existe na base de dados. ID INFORMADO: 19"
+
+get conteúdos 200 - "id": "string", mas é apresentado tipo int
+
+get conteúdos/id 200 - "id": "string", mas é apresentado tipo int
+get conteúdos/id 404 - "error": "O conteúdo com o ID: 10 não foi encontrado."
+
+status code 
+conteudo
+
+
+delete status code 200, mas deveria ser 204 pois foi com sucesso mas não retorna informação
+ 
+
+
+
+============================================================================================================
+
+1. DELETE /conteudos/{id}
+A descrição retornada no statuscode 200 é diferente da esperada.
+Retornada: O conteúdo foi removido com sucesso!
+Esperada: Conteúdo removido com sucesso
+
+A descrição retornada no statuscode 404 é diferente da esperada.
+Retornada: Erro ao excluir o conteúdo, o conteúdo não foi encontrado.
+Esperada: Conteúdo não encontrado
+
+
+
+2. PUT /conteudos/{id}
+O Request body de exemplo vem com dois campos que não deveriam existir, pois não são necessários para executar e gerando erro.
+Request body de exemplo:
+{
+  "id": "string",
+  "titulo": "string",
+  "descricao": "string",
+  "tipoConteudo": "string",
+  "conteudo": "string",
+  "dataCadastro": "2024-07-05T20:03:24.379Z"
+}
+
+Request body necessário para executar:
+{
+  "titulo": "string",
+  "descricao": "string",
+  "tipoConteudo": "string",
+  "conteudo": "string"
+}
+
+A descrição retornada no statuscode 404 é diferente da esperada.
+Retornada: O contedúdo que você está tentando alterar não existe na base de dados. ID INFORMADO: 20
+Esperada: Conteúdo não encontrado
+
+
+3. GET /conteudos/{id}
+No valor de exemplo do retorno com statuscode 200 o id informado é do tipo string, mas no response body retorna o id com o tipo inteiro.
+
+A descrição retornada no statuscode 404 é diferente da esperada.
+Retornada: O conteúdo com o ID: 20 não foi encontrado.
+Esperada: Conteúdo não encontrado
+
+
+
+4. GET /conteudos
+No valor de exemplo do retorno com statuscode 200 o id informado é do tipo string, mas no response body retorna o id com o tipo inteiro.
+
+
+5. POST /conteudos
+O Request body de exemplo vem com dois campos que não deveriam existir, pois não são necessários para executar e gerando erro.
+Request body de exemplo:
+{
+  "id": "string",
+  "titulo": "string",
+  "descricao": "string",
+  "tipoConteudo": "string",
+  "conteudo": "string",
+  "dataCadastro": "2024-07-05T20:03:24.379Z"
+}
+
+Request body necessário para executar:
+{
+  "titulo": "string",
+  "descricao": "string",
+  "tipoConteudo": "string",
+  "conteudo": "string"
+}

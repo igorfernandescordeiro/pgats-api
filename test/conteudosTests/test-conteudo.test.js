@@ -23,13 +23,14 @@ describe('Testes integrados da toda de conteúdos', () => {
 
     let idConteudoCadastrado;
 
-    it('Criar novo conteúdo', async () => {
+    beforeAll( async () => {
+        // realiza cadastro antes de conteúdo antes dos demais testes e verifica se está correto
         const response = await request(rotaUsers)
             .post('/conteudos')
             .send(payload_cadastro_conteudo);
         console.log(response.body);
 
-        //desestruturação do response para poder validar os dados recebidos com enviados
+        // esestruturação do response para poder validar os dados recebidos com enviados
         const { titulo, descricao, tipoConteudo, conteudo } = response.body;
 
         // salva o id para utilizar em testes de alteração e deleção
